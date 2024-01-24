@@ -1,0 +1,23 @@
+/* src/components/Navbar.css */
+nav {
+  background-color: #333;
+  padding: 10px;
+  font-family: "Nova Square", sans-serif; /* Replace 'Nova Square' with the actual font name */
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif; /* Replace 'Poppins' with the actual font name */
+}
