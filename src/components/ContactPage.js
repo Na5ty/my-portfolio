@@ -1,13 +1,15 @@
-// src/components/Contact.js
+// src/components/ContactPage.js
 import React from "react";
+import ContactForm from "./ContactForm";
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <div>
       <h2>Contact</h2>
-      <p>This is a placeholder for the Contact page.</p>
+      <p>Feel free to reach out to me by filling out the form below:</p>
+      <ContactForm />
     </div>
   );
 };
 
-export default Contact;
+export default ContactPage;

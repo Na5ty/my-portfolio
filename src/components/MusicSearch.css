@@ -1,0 +1,58 @@
+/* src/components/MusicSearch.css */
+.music-search {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.music-search h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.music-search label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.music-search input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #444;
+  color: white;
+}
+
+.music-search button {
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.music-search button:hover {
+  background-color: #c9302c;
+}
+
+.music-search .search-results {
+  margin-top: 20px;
+}
+
+.music-search .song {
+  margin-bottom: 15px;
+}
+
+.music-search audio {
+  width: 100%;
+  margin-top: 10px;
+}
