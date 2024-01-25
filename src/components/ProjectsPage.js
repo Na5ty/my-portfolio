@@ -3,14 +3,14 @@ import React from "react";
 import YouTubePlayer from "./YouTubePlayer";
 import WeatherApp from "./WeatherApp";
 import MusicSearch from "./MusicSearch";
+import "./ProjectsPage.css"; // Import the CSS file for styling
 
 const ProjectsPage = () => {
   const videoId = "2EePImr70Jg";
 
   return (
-    <div>
+    <div className="projects-page">
       <h2>Projects</h2>
-      <p>This is a placeholder for the Projects page.</p>
       <WeatherApp />
       <MusicSearch />
       <YouTubePlayer videoId={videoId} />

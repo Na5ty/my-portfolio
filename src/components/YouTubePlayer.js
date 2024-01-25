@@ -9,7 +9,11 @@ const YouTubePlayer = ({ videoId }) => {
     width: "640",
   };
 
-  return <YouTube videoId={videoId} opts={opts} />;
+  return (
+    <div className="youtube-player-container">
+      <YouTube videoId={videoId} opts={opts} className="youtube-player" />
+    </div>
+  );
 };
 
 export default YouTubePlayer;

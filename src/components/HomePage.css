@@ -1,0 +1,70 @@
+/* src/components/HomePage.css */
+
+.hero-section {
+  background-image: url("../img/pexels-miriam-espacio-110854.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.astronaut-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  margin-bottom: 20px;
+  position: relative;
+  top: 150px;
+  animation: hoverUpDown 2s linear infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+@keyframes hoverUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-text,
+.skills-section {
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skills-section {
+  text-align: left;
+}
+
+.skills-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.skills-section p {
+  font-size: 16px;
+}
