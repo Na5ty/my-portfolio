@@ -1,4 +1,3 @@
-// src/components/MusicSearch.js
 import React, { useState, useRef, useEffect } from "react";
 import "./MusicSearch.css";
 
@@ -7,11 +6,6 @@ const MusicSearch = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [selectedSong, setSelectedSong] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [favorites, setFavorites] = useState(() => {
-    // Load favorites from sessionStorage on component mount
-    const storedFavorites = sessionStorage.getItem("favorites");
-    return storedFavorites ? JSON.parse(storedFavorites) : [];
-  });
 
   const audioRef = useRef(new Audio());
 
@@ -25,23 +19,18 @@ const MusicSearch = () => {
     currentAudioRef.addEventListener("ended", handleAudioEnd);
 
     return () => {
-      // Use the local variable inside the cleanup function
       currentAudioRef.removeEventListener("ended", handleAudioEnd);
     };
-  }, []); // No need to include audioRef.current in the dependency array
+  }, []);
 
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
     } else {
       audioRef.current.pause();
+      audioRef.current.currentTime = 0;
     }
   }, [isPlaying]);
-
-  useEffect(() => {
-    // Save favorites to sessionStorage whenever the favorites list changes
-    sessionStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
 
   const searchMusic = async () => {
     try {
@@ -70,31 +59,13 @@ const MusicSearch = () => {
 
   const handlePlay = (previewUrl) => {
     setSelectedSong(previewUrl);
-    audioRef.current.src = previewUrl;
     setIsPlaying(true);
-  };
-
-  const handlePause = () => {
-    setIsPlaying(false);
+    audioRef.current.src = previewUrl;
   };
 
   const handleStop = () => {
     setSelectedSong(null);
-    audioRef.current.pause();
-    audioRef.current.currentTime = 0;
     setIsPlaying(false);
-  };
-
-  const handleAddToFavorites = () => {
-    if (selectedSong) {
-      setFavorites((prevFavorites) => [...prevFavorites, selectedSong]);
-    }
-  };
-
-  const handleRemoveFromFavorites = () => {
-    setFavorites((prevFavorites) =>
-      prevFavorites.filter((song) => song !== selectedSong)
-    );
   };
 
   return (
@@ -115,25 +86,8 @@ const MusicSearch = () => {
           <div key={song.id} className="song">
             <p>{song.title}</p>
             <button onClick={() => handlePlay(song.preview)}>Play</button>
-            {favorites.includes(selectedSong) ? (
-              <button onClick={handleRemoveFromFavorites}>
-                Remove from Favorites
-              </button>
-            ) : (
-              <button onClick={handleAddToFavorites}>Add to Favorites</button>
-            )}
-            <button onClick={handlePause}>Pause</button>
           </div>
         ))}
-      </div>
-
-      <div>
-        <h3>Favorites</h3>
-        <ul>
-          {favorites.map((favorite, index) => (
-            <li key={index}>{favorite.title}</li>
-          ))}
-        </ul>
       </div>
 
       {selectedSong && (

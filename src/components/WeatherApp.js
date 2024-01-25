@@ -63,7 +63,7 @@ const WeatherApp = () => {
       <button onClick={getWeather}>Get Weather</button>
 
       {weather && (
-        <div>
+        <div className="weather-item">
           <h3>
             {weather.name}, {weather.sys.country}
           </h3>
