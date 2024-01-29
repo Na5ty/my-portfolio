@@ -6,7 +6,7 @@ const About = () => {
     <>
       <div>
         <h2>About</h2>
-        <p>This is a placeholder for the About page.</p>
+        <p>My e-mail adress: thomas.zeides@proton.me</p>
       </div>
       <div
         id="carouselExampleCaptions"
