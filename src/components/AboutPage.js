@@ -38,7 +38,7 @@ const About = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="https://via.placeholder.com/800x400"
+              src={require("../img/web-design.jpg")}
               className="d-block w-100"
               alt="First Slide"
             />
@@ -51,7 +51,7 @@ const About = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://via.placeholder.com/800x400"
+              src={require("../img/programming.jpg")}
               className="d-block w-100"
               alt="Second Slide"
             />
