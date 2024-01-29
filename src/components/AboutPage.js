@@ -6,7 +6,7 @@ const About = () => {
     <>
       <div>
         <h2>About</h2>
-        <p>My e-mail adress: thomas.zeides@proton.me</p>
+        <p>My e-mail address: thomas.zeides@proton.me</p>
       </div>
       <div
         id="carouselExampleCaptions"
