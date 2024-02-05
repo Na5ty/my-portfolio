@@ -1,6 +1,8 @@
 // src/components/HomePage.js
 import React, { useState, useEffect } from "react";
 import "./HomePage.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"; // Make sure this import is correct
 
 import astronautImage from "../img/imgbin_astronaut-png.png";
 import { Link } from "react-router-dom";
@@ -91,6 +93,15 @@ const HomePage = () => {
             <Link to="/projects">Projects</Link> section. If you'd like to get
             in touch...
           </p>
+          <button className="btn btn-success">
+            <Link
+              to="/contact"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Contact Me! {""}
+            </Link>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </button>
         </div>
         <div className="hero-pic">
           <img
