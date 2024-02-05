@@ -3,7 +3,7 @@ import React from "react";
 import YouTubePlayer from "./YouTubePlayer";
 import WeatherApp from "./WeatherApp";
 import MusicSearch from "./MusicSearch";
-import "./ProjectsPage.css"; // Import the CSS file for styling
+import "./ProjectsPage.css";
 
 const ProjectsPage = () => {
   const videoId = "2EePImr70Jg";

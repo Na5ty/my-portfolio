@@ -2,12 +2,12 @@
 
 .youtube-player-container {
   width: 70%;
-  margin: 20px auto; /* Add some margin for spacing */
+  margin: 20px auto;
 }
 
 .youtube-player {
-  width: 100%; /* Make the player responsive within its container */
-  border-radius: 8px; /* Add border-radius for rounded corners */
-  overflow: hidden; /* Hide any overflow to prevent unwanted scrollbars */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for a lifted appearance */
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

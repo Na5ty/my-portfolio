@@ -7,8 +7,8 @@ const WeatherApp = () => {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState("");
 
-  const apiKey = "57d35419165cc3e2e37b3863dee96af3"; // Replace with your OpenWeatherMap API key
-  const unsplashApiKey = "UrIZeG9XRnCThvW5cvRY8g2wQBDFQyyknSqwfebq3IQ"; // Replace with your Unsplash API key
+  const apiKey = "57d35419165cc3e2e37b3863dee96af3";
+  const unsplashApiKey = "UrIZeG9XRnCThvW5cvRY8g2wQBDFQyyknSqwfebq3IQ";
 
   const getWeather = async () => {
     try {
@@ -39,7 +39,7 @@ const WeatherApp = () => {
       // Assuming the image URL is available in the 'urls' property
       const imageUrl = imageData.urls?.regular;
 
-      // Apply the background image to the weather-app div
+      //Img for the background
       document.querySelector(
         ".weather-app"
       ).style.backgroundImage = `url(${imageUrl})`;
