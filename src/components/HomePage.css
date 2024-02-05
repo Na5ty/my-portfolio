@@ -12,7 +12,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr; /* Two columns for the hero section */
   grid-template-rows: auto auto;
   align-items: center;
   justify-content: center;
@@ -22,6 +22,7 @@ body {
 }
 
 .hero-content {
+  grid-column: 1 / span 2; /* Span both columns for hero content */
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto;
@@ -30,8 +31,6 @@ body {
 }
 
 .hero-text {
-  grid-column: 1 / span 2;
-  margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 15px;
   padding: 20px;
@@ -39,11 +38,11 @@ body {
 }
 
 .hero-pic {
-  grid-row: 2;
+  grid-column: 2;
 }
 
 .second-text {
-  grid-column: 1 / span 2;
+  grid-column: 1;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 15px;
   padding: 20px;
@@ -55,9 +54,18 @@ body {
   height: auto;
   max-height: 500px;
   margin-bottom: 20px;
+  top: 100px;
   position: relative;
-  top: 150px;
   animation: hoverUpDown 2s linear infinite;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.cat-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
@@ -73,7 +81,8 @@ body {
 }
 
 .skills-section {
-  margin-bottom: 20px;
+  grid-column: 2;
+  grid-row: 2;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 15px;
   padding: 20px;
@@ -82,10 +91,42 @@ body {
 }
 
 .skills-section h2 {
-  font-size: 28px;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
 .skills-section p {
   font-size: 16px;
+}
+
+.cat-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#breedSelect,
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#breedSelect {
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #45a049;
 }
